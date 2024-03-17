@@ -1,0 +1,96 @@
+*{
+   margin: 0;
+   padding:0;
+   box-sizing: border-box;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: white;
+}
+
+.divs img{
+   height: 45px;
+   width: 45px;
+   object-fit: cover;
+   border-radius: 50%;
+ 
+
+}
+
+nav{
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: rgb(97, 100, 51);
+   padding: 10px 15px;
+}
+ul{
+   display: flex;
+   justify-content: space-around;
+   flex-basis: 35%;
+   color: white;
+}
+ul li {
+   list-style-type: none;
+}
+ul a{
+   text-decoration: none;
+   font-weight: 500;
+}
+
+ul :not(:last-child) a:hover,  a.active{
+   color: rgba(14, 1, 19, 0.89);
+   text-decoration: underline 2px;
+   text-decoration-color: white;
+   text-underline-offset: 5px;
+}
+
+.btn{
+   background-color: rgb(36, 36, 197);
+   border: none;
+   border-radius: 8px;
+   padding: 4px 8px;
+   font-size: 14px;
+}
+.btn:hover{
+   cursor: pointer;
+   background-color: rgb(190, 12, 12);
+}
+
+.hamberger{
+   display: none;
+   font-size: 24px;
+   cursor: pointer;
+}
+.website {
+   display: none;
+
+}
+
+ @media screen and (max-width:1024px) {
+
+   .hamberger{
+      display: flex;
+   }
+   .website {
+      display: flex;
+   }
+   ul{
+      display: none;
+   }
+   ul.hams_active{
+      display: flex;
+   }
+} 
+
+.hams_active{
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 20px;
+   top: 64px;
+   left: 0;
+   right: 0;
+   height: 300px;
+   background-color: rgb(124, 124, 124);
+}
